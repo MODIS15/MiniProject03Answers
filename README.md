@@ -1,5 +1,6 @@
 # MiniProject03Answers
 Along with the documentation, submit the answer to the following questions.
+
 1.Briefly explain your solution and why it works. 
 
 2.What is the average-case, best-case, and worst-case space consumed at each Node?
