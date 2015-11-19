@@ -1,0 +1,15 @@
+\section{Question 1: Briefly explain your solution and why it works}
+A Node can hold the information on a right and left neighbor Node, by storing the IP and port of the specific Node.
+\myfigure{P2P1}{Single node before connection}{p2p1}
+The initial Node will have no Nodes stored for its left and right neighbor as is shown in \myref{p2p1}.
+\myfigure{P2P2}{Incoming connection from Node B}{p2p2}
+When a new Node wants to connect it sends a From message containing information about its IP and port to the Node it wants to connect to. The existing Node (A) will check if it holds any information about a neighbor in its right or left variable \myref{p2p2}.  
+\myfigure{P2P3}{Nodes after connection}{p2p3}
+In \myref{p2p2} Node A is not holding any neighbor information at all, and so it will store the information about the incoming Node (B) in both its right and left value \myref{p2p3}. The arrows shown illustrates that the Node pointing to another Node holds that Node's IP and port info in its left and/or right value. To store this information a connection is established between the Nodes, but it is closed immediately after, and  so no permanent connection is held open. E.g. in \myref{p2p3} both Node A and B store each others IP and port in both their right and left value. The Nodes will echo the Nodes according to their left and right values to see if they are alive.
+\myfigure{P2P4}{Incoming Node connection from Node C}{p2p4}
+When another Node (C) wants to connect to one of the existing Nodes (A), the requested Node (A) will send the IP and port info to the Node according to its left value (B) assuming that it exists. When the Node (B) receives the IP and port it will change its right value to this (C), and send a From message to the Node (C) \myref{p2p4}.
+\myfigure{P2P5}{Nodes after connection}{p2p5}
+ Now the initially requested Node (A) will change its left value to match the incoming Node (C) and lastly the incoming Node (C) will set its right value to match the requested Node (A) and its left value to the incoming Node (B) \myref{p2p5}.
+ \pagebreak
+\myfigure{P2P6}{Nodes after 3rd Node disconnect}{p2p6}
+If one of the Nodes (B) disconnects, the Node which is connected to this node through its right value (A) will send a message to its neighbor Node (C) on the left value asking if this Node's left value is the same as the requesting Node's (A) right value. If this is not the case the message will go to the next Node and the next and so on until finding a match. Then the matching Node (C) will get the info of the requesting Node (A) and connect its left value to it. The requesting Node (A) will then store this Node's (C) info in its right value, and the circle is complete again.

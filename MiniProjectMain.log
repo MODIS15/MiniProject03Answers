@@ -1,0 +1,213 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.2)  19 NOV 2015 19:30
+entering extended mode
+**C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/MiniProjectM
+ain.tex
+
+(C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/MiniProjectMa
+in.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\danish.ldf"
+Language: danish 2009/09/19 v1.3r Danish support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 82.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\MiniProjectMa
+in.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count90
+\scratchdimen=\dimen106
+\scratchbox=\box28
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count93
+\MPscratchDim=\dimen107
+\MPnumerator=\count94
+\makeMPintoPDFobject=\count95
+\everyMPtoPDFconversion=\toks18
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 22.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¦ in font cmr12!
+
+Overfull \hbox (53.84184pt too wide) in paragraph at lines 22--22
+ [][] 
+ []
+
+[1
+
+{C:/Users/FamilienMarstrand/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\question/ques
+tion1.tex <image/P2P1.png, id=8, 153.57375pt x 128.27925pt>
+File: image/P2P1.png Graphic file (type png)
+
+<use image/P2P1.png>
+Package pdftex.def Info: image/P2P1.png used on input line 3.
+(pdftex.def)             Requested size: 153.57336pt x 128.27893pt.
+ <image/P2P2.png, id=9, 189.70876pt x 110.21175pt>
+File: image/P2P2.png Graphic file (type png)
+
+<use image/P2P2.png>
+Package pdftex.def Info: image/P2P2.png used on input line 5.
+(pdftex.def)             Requested size: 189.70828pt x 110.21147pt.
+ <image/P2P3.png, id=10, 171.64125pt x 137.7647pt>
+File: image/P2P3.png Graphic file (type png)
+
+<use image/P2P3.png>
+Package pdftex.def Info: image/P2P3.png used on input line 7.
+(pdftex.def)             Requested size: 171.64081pt x 137.76434pt.
+ [2 <C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/image/P2P
+1.png> <C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/image/
+P2P2.png>]
+<image/P2P4.png, id=15, 278.2395pt x 217.26169pt>
+File: image/P2P4.png Graphic file (type png)
+ <use image/P2P4.png>
+Package pdftex.def Info: image/P2P4.png used on input line 9.
+(pdftex.def)             Requested size: 278.23882pt x 217.26114pt.
+
+<image/P2P5.png, id=16, 199.64587pt x 191.5155pt>
+File: image/P2P5.png Graphic file (type png)
+ <use image/P2P5.png>
+Package pdftex.def Info: image/P2P5.png used on input line 11.
+(pdftex.def)             Requested size: 199.64537pt x 191.51501pt.
+ [3 <C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/image/P2P
+3.png> <C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/image/
+P2P4.png>] <image/P2P6.png, id=20, 160.80075pt x 147.70181pt>
+File: image/P2P6.png Graphic file (type png)
+ <use image/P2P6.png>
+Package pdftex.def Info: image/P2P6.png used on input line 14.
+(pdftex.def)             Requested size: 160.80034pt x 147.70145pt.
+
+[4 <C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers/image/P2P5
+.png>])
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\question/ques
+tion2.tex)
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\question/ques
+tion3.tex)
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\question/ques
+tion4.tex)
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\question/ques
+tion5.tex) [5 <C:/Users/FamilienMarstrand/Documents/GitHub/MiniProject03Answers
+/image/P2P6.png>]
+(C:\Users\FamilienMarstrand\Documents\GitHub\MiniProject03Answers\MiniProjectMa
+in.aux) ) 
+Here is how much of TeX's memory you used:
+ 1576 strings out of 493921
+ 21664 string characters out of 3144841
+ 73712 words of memory out of 3000000
+ 4872 multiletter control sequences out of 15000+200000
+ 7280 words of font info for 26 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,6n,24p,803b,203s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on MiniProjectMain.pdf (5 pages, 95514 bytes).
+PDF statistics:
+ 40 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

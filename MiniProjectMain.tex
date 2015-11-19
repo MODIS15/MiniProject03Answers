@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[danish]{babel}
+\usepackage{graphicx}
+\graphicspath{{image/}}
+\usepackage{float}
+
+\newcommand{\myfigure}[3]{
+\begin{figure}[H]
+	\includegraphics{#1}
+	\caption{#2}
+	\label{#3}
+\end{figure}
+}
+\newcommand{\myref}[1]{Figure \ref{#1}}
+
+\author{Dennis Thinh Tan Nguyen, Jacob Holm, Jacob Mullit Møniche,\\
+		 Pernille Lous, Thor Valentin Aakjær Olesen, William Diedrichsen Marstrand}
+\date{\today}
+\title{Mini Project 3}
+
+\begin{document}
+\maketitle
+\pagebreak
+
+
+%Question Sections
+
+\input{question/question1}
+\input{question/question2}
+\input{question/question3}
+\input{question/question4}
+\input{question/question5}
+
+\end{document}
