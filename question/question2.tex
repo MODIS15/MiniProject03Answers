@@ -1,41 +1,63 @@
 \section{Space Consumption}
-If this assumption is upheld, the system will be able to handle N Nodes and disconnection of N-1 Nodes.
+If this assumption is upheld, the network will be able to handle N Nodes and disconnection of N-1 Nodes.
 
-We both explain the Space Consumption for each Node and the system in general.\\
-The resources in our system are strings inserted by the user. The space consumption therefore depends on both the structure and what the user inserts into the system. A message's space consumption is 4bytes + variable length of the string. 
+We both explain the Space Consumption for each Node and the network in general.\\
+The resources in our network are strings inserted by the user. The space consumption therefore depends on both the structure and what the user inserts into the network. A message's space consumption is 4bytes + variable length of the string. 
 
-Since the Nodes do not know which messages there have passed through the Nodes before, the Nodes do not use space consumption to store this data. 
+Since the Nodes do not know which messages there have passed through the Nodes before, the Nodes do not use space consumption to store these resources. 
 
+N is information consisting of a key and a value.
 
-
-N is the number of PutMessages.
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Object / Actor & Researcher & Manager \\ \hline
+		Researcher & R & R \\ \hline
+		Paper & RU & RU \\ \hline
+		Project & R & R \\ \hline
+		Task & RU & RU  \\ \hline
+		Team & R & CRUD \\ \hline
+		API & R & R  \\
+		\hline
+	\end{tabular}
+\end{center}
 
 \subsection{Best case}
-\textb{Each Node}
-The very best case for each Node will be zero if nothing is stored in the Node, but this is not likely and the best case is considered as O(N). When the Node is created and the user makes a PutMessage the Node will use space consumption O(N).
-
-
-\textb{For the system}
-The lowest space consumption for the system will be if there is only one Node in the system. In this case none of the data is duplicated and will only take place in this Node; this will held O(N) amount of data. \\ However, this is not be the best solution since there will be no backups of any data and the system will store a heavy amount of data in just one Node. This will have a bad effect on how the structure distribute further inserted data - this is explained in subsection "Worst case". \\ 
+\textbf{Each Node}
+The very best case for each Node will be zero if nothing is stored in the Node, but this is not likely and the best case is considered as O(N). When the Node is created and the user makes a PutMessage the Node will use space consumption O(N).\\\\ \textbf{For the network}
+The lowest space consumption for the network will be if there is only one Node in the network. In this case none of the resources are duplicated and will only take place in this Node; this will held O(N) amount of resources. \\ However, this is not the best solution since there will be no backups of any resource and a heavy amount of resources are stored in just one Node. This will have a bad effect on how the structure distribute further inserted resources - this is explained in subsection "Worst case". \\ 
 
 \subsection{Average case}
-\textb{Each Node}
-It is difficult to calculate the exact average case since it is depending of the usage of the system. This system is unstructured and the average case depends on how and how many Nodes are added/removed to the system. This further depends on the users input to the system.\\
-What we can say is that for each Node it will be between (0-N) but it can never be more than N. \\
-
-\textb{For the system}
-For the system in general it is most likely that the space consumption is (N*2) since every time a need Node is created, it will backup the data stored on its left side. 
+\textbf{Each Node}
+It is difficult to calculate the exact average case since it is depending of the usage of the network. This network is unstructured and the average case depends on how and how many Nodes are added/removed. This further depends on the users input.\\
+What we can say is that for each Node it will be between (0-N) but it can never be more than N. \\\\ \textbf{For the network}
+For the network in general it is most likely that the space consumption is (N*2) since every time a need Node is created, it will backup the resources stored on its left side. 
 
 \subsection{Worst case}
-\textb{Each Node}
-When all of the data is duplicated the worst case must be the double of the best case. Therefore, the worst case will take (N*2) space consumption for each node. \\
+\textbf{Each Node}
+When all of the resources are duplicated the worst case must be the double of the best case. Therefore, the worst case will take (N*2) space consumption for each node.\\\\ \textbf{For the network}
+According to how our network works, there will be another worse case scenario: \\
 
-\textb{For the system}
+If the network consist of x-numbers of Nodes, then there is an amount of resources stored. 
 
-According to how our system works, there will be another worse case scenario: \\
-When a Node is disconnected from the system it will sent a backup of the resource to right side from itself. \\
-If the Nodes in the system continues to disconnect without creating new Nodes, in the end the system will only consists of one Node. \\\\
-When there is only one Node left in the system, this Node1 will store all the resources of the whole system. In this case, when we create a new Node2, this Node2 will request the first Node1 for resources to backup, and the first Node1 will send its resources. \\ The system will then consist of two Nodes with a heavy amount of data.\\
+\myfigure{P2P10}{A network with no Nodes disconnected yet}{p2p10}
+
+When a Node is disconnected from the network it will sent a backup of the resource to right side from itself. If the Nodes continues to disconnect without creating new Nodes, in the end the network will only consists of one Node. \\\\
+
+
+\myfigure{P2P11}{A network with one Node disconnected.}{p2p11}
+
+\myfigure{P2P12}{A network with two Nodes disconnected. The resources are now stored in neighbor B.}{p2p11}
+
+\myfigure{P2P7}{A network with only one Node left. This Node stores all the resources from the other pre-existing Nodes. It will make its own backup to its original resources.}{p2p7}
+When there is only one Node left in the network, this Node(A) will store all the resources of the whole network in this particular Node.\\
+In this case, when we create a new Node(B), this Node(B) will request the first Node(A) for resources to backup, and the first Node(A) will send its resources. \\ The network will then consist of two Nodes with a heavy amount of resources.\\
+
+\myfigure{P2P8}{Node B will take a backup of A.}{p2p8}
+
 The worse case appears after this scenario, when we add x-numbers of Nodes. \\
-When we create Node3, this Node will ask Node2 if it needs any backup - but this is not the case, since Node1 and Node2 already have duplicated data. Node3 and every other Node created after this will never store any resources.\\
-This mean we can create a whole new system with x-number of Nodes, but the data will cluster in Node1 and Node2. 
+When we create Node(C), this Node will ask Node(B) if it needs any backup - but this is not the case, since Node(A) and Node(B) already have duplicated resources. Node(C) and every other Node created after this will never store any resources.\\
+This mean we can create x-number of Nodes, but the resources will cluster in Node(A) and Node(B) no matter what. 
+
+
+\myfigure{P2P9}{All the resources are stored in Node A and B and they will cluster here. No resource is stored in another Node than A and B no matter how many Node we add to the network.}{p2p9}
