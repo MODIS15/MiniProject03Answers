@@ -1,0 +1,14 @@
+\section{Number and Size of Messages}
+\subsection{PUT message from a client}
+When a message is being PUT it is always stored at the Node to which it is send. Therefore both the best and worst case of a PUT message is 1 and thus the average-case number of messages is also 1.\\
+A PUT message holds 3 fields two of which is constant (int for a key, and boolean for the version) and a String which can vary in size.
+And as such the size of all PUT messages is linear in the length of the message String, inputted by the user.
+
+\subsection{Successful GET message}
+The best case for the number of messages from a successful GET message is 2, first the request for a resource and then the message with the resource.
+The worst-case number of messages is $(N-1)+2 = N+1$ where N is the number of Nodes and +2 for the initial GET message and the returned resource.
+The average-case number of messages is dependent on the number of Nodes in the network in the way that when the number of Nodes increases the potential of not finding the resource at the first Node becomes lower and the number of potential messages needed to find the resource increases as well.
+
+\subsection{Unsuccessful message}
+If a GET message is asking for a resource with a non existing key, the GET message will go around in the system for ever. 
+This means that in this case both the best- worst- and average-case number of messages will be infinitely high increasing until the system  stops running.
