@@ -1,2 +1,50 @@
 \section{Space Consumption}
- If this assumption is upheld, the system will be able to handle N Nodes and disconnection of N-1 Nodes, because the remaining Nodes will always reconstruct their connections and create new references  whenever 
+If this assumption is upheld, the system will be able to handle N Nodes and disconnection of N-1 Nodes.
+
+\subsection{Best case}
+The lowest space consumption will be if there is only one Node. Then the data is not duplicated and will only take place in this Node. This will be O(N) times of data. \\ This will anyhow not be the best solution since there will be no backups of any data and we will get a massive amount of data in just one Node. \\ 
+Since our messages do not know where they have been before in the system, the Nodes do not use space consumption to store this data. 
+
+The resources in our system are strings. Therefore, our space consumption further depends on what the user inserts into the system. A message's space consumption is 4 bytes + variable length of the string. 
+
+\subsection{Average case}
+Since the best case is O(N) when the data is not 
+
+would be 4bytes + variable of the string and the worst case is .. 
+It's difficult to tell the average case since it depends on the input to the system. 
+
+The space consumption is therefore O(N*2)
+
+\subsection{Worst case}
+Since the best case is O(N) when the data is not duplicated, then when all of the data is duplicated the worst case must therefore take 0(N*2) space consumption. \\
+This is how much space the system will consume, but according to how our system works, there will be another worse case scenario: \\
+When a Node is disconnected from the system it will sent a backup of the resource to the Node to the right side from itself. \\
+If the Nodes in the system continues to disconnect without creating new Nodes, in the end the system will only consists of one Node. \\\\
+When there is only one Node left in the system, this Node1 will store all the resources of the whole system. In this case, when we create a new Node2, this Node2 will ask the first Node1 for resources to make a backup for and the first Node1 will send its resources. \\ The system will then consist of two Nodes with a big amount of data.\\
+The worse case appears, when we create x-number of Nodes. \\
+When we create Node3, this Node will ask Node2 if it needs any backup - but this is not the case, since Node1 and Node2 already have duplicated data. Node3 and every other Node created after this will never store any resources.\\
+This mean we can create a whole new system with x-number of Nodes, but the data will cluster in Node1 and Node2. 
+
+
+bool in messages make the second node false and first node true. therefore number three doesn't need to make a backup, since nr. two already has a backup 
+
+
+%Our system is ring structure and here we can pretend that the data is "ligelidt fordelt", how much time do you then use for finding the correct data? Vi putter data i den node, det er blevet sendt til. Beskeden kan blive længere, hvis den skal vide, hvor den har været før - og dermed kan de bruge mere plads, jo længere de skal. Der er mange forskellige måde at se, hvordan systemer skalerer. 
+%I vores system bliver beskeden ikke større, så den er i egentlig bare den samme størrelse som start. Vi har en variabel størrelse/den skalerer konstant. 
+
+%4 bytes udover string. Vi gemmer en kopi af ressourcen. 2byte + 2N variabel. O nationen er N (hvor N er strengens længde).
+
+
+%Average afhænger meget af opførslen af brugeren. Alle beskeder er som udgangspunkt linære fordi ...? 
+%Average er typisk svært at gøre rede for, since at man ikke altid kan have en datalogisk tilgang til det. Derfor er det typisk nok, at skrive at "man ikke kan undstøtte sit argument matemmatisk, men det mest sandsynlige er ...."
+%Størrelsen af beskeden er linæer i brugerens indput 
+%Hvis at der bliver spurgt om en key, der ikke er i systemet, så fordi at det ikke bliver gemt, om hvilken Nodes den har været igennem, så vil forespørgslerne blot blive sendt rundt og rundt i en uendelighed. Dette kan få systemet til at crashe, hvis man bliver ved med at med at requeste data. ipv6 er 128bit (hex)
+%samlet i clusters
+%når vi sender en getbesked, så er det egentlig N (antallet af Nodes), -1, og derefter +2. Det bliver derfor N+1. -1 da den ikke skal spørge den første igen, N = igennem alle noder, og +2 for at spørge ... 
+%In our solution we will put the resource in the system manually and therefore it's not guaranteed that the resources are distributed effectively. 
+
+
+
+\begin{itemize}
+	\item Best case
+\end{itemize}
