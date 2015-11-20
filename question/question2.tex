@@ -6,60 +6,36 @@ The resources in our system are strings inserted by the user. The space consumpt
 
 Since the Nodes do not know which messages there have passed through the Nodes before, the Nodes do not use space consumption to store this data. 
 
+
+
+N is the number of PutMessages.
+
 \subsection{Best case}
 \textb{Each Node}
-The best case for each Node will be O(N) (Where N is the number of PutMessages). 
+The very best case for each Node will be zero if nothing is stored in the Node, but this is not likely and the best case is considered as O(N). When the Node is created and the user makes a PutMessage the Node will use space consumption O(N).
+
 
 \textb{For the system}
-The lowest space consumption will be if there is only one Node in the system. In this case none of the data is duplicated and will only take place in this Node; this will held O(N) amount of data. \\ However, this is not be the best solution since there will be no backups of any data and we will get a heavy amount of data in just one Node. This will have a bad effect on how the structure distribute further inserted data - this is explained in subsection "Worst case". \\ 
+The lowest space consumption for the system will be if there is only one Node in the system. In this case none of the data is duplicated and will only take place in this Node; this will held O(N) amount of data. \\ However, this is not be the best solution since there will be no backups of any data and the system will store a heavy amount of data in just one Node. This will have a bad effect on how the structure distribute further inserted data - this is explained in subsection "Worst case". \\ 
 
 \subsection{Average case}
 \textb{Each Node}
-It is difficult to calculate the exact average case since it depends on the input to the system, but we can say, that for each Node it will be between 0-N (Where N is the number of PutMessages). The average is it everything in between, but it can never be more than N. 
-
-For the system in general it is most likely that the space consumption is O(N*2) since 
-
-
-Hvis det er tale om space consumption genneralt / for hele systemet. Så max: O(N*2), hvor N er antallet af beskeder.
-
-Hvis der er space consumption PR. NODE så er det mellem 0-N pr. node, hvor N er antallet af putMessages. Det kan være alt derimellem. Men aldrig større end N.
+It is difficult to calculate the exact average case since it is depending of the usage of the system. This system is unstructured and the average case depends on how and how many Nodes are added/removed to the system. This further depends on the users input to the system.\\
+What we can say is that for each Node it will be between (0-N) but it can never be more than N. \\
 
 \textb{For the system}
+For the system in general it is most likely that the space consumption is (N*2) since every time a need Node is created, it will backup the data stored on its left side. 
 
 \subsection{Worst case}
 \textb{Each Node}
-Since the best case is O(N) when the data is not duplicated, then when all of the data is duplicated the worst case must therefore take O(N*2) space consumption. \\
+When all of the data is duplicated the worst case must be the double of the best case. Therefore, the worst case will take (N*2) space consumption for each node. \\
 
 \textb{For the system}
 
-This is how much space the system will consume, but according to how our system works, there will be another worse case scenario: \\
-When a Node is disconnected from the system it will sent a backup of the resource to the Node to the right side from itself. \\
+According to how our system works, there will be another worse case scenario: \\
+When a Node is disconnected from the system it will sent a backup of the resource to right side from itself. \\
 If the Nodes in the system continues to disconnect without creating new Nodes, in the end the system will only consists of one Node. \\\\
-When there is only one Node left in the system, this Node1 will store all the resources of the whole system. In this case, when we create a new Node2, this Node2 will ask the first Node1 for resources to make a backup for and the first Node1 will send its resources. \\ The system will then consist of two Nodes with a big amount of data.\\
-The worse case appears, when we create x-number of Nodes. \\
+When there is only one Node left in the system, this Node1 will store all the resources of the whole system. In this case, when we create a new Node2, this Node2 will request the first Node1 for resources to backup, and the first Node1 will send its resources. \\ The system will then consist of two Nodes with a heavy amount of data.\\
+The worse case appears after this scenario, when we add x-numbers of Nodes. \\
 When we create Node3, this Node will ask Node2 if it needs any backup - but this is not the case, since Node1 and Node2 already have duplicated data. Node3 and every other Node created after this will never store any resources.\\
 This mean we can create a whole new system with x-number of Nodes, but the data will cluster in Node1 and Node2. 
-
-
-bool in messages make the second node false and first node true. therefore number three doesn't need to make a backup, since nr. two already has a backup 
-
-
-%Our system is ring structure and here we can pretend that the data is "ligelidt fordelt", how much time do you then use for finding the correct data? Vi putter data i den node, det er blevet sendt til. Beskeden kan blive længere, hvis den skal vide, hvor den har været før - og dermed kan de bruge mere plads, jo længere de skal. Der er mange forskellige måde at se, hvordan systemer skalerer. 
-%I vores system bliver beskeden ikke større, så den er i egentlig bare den samme størrelse som start. Vi har en variabel størrelse/den skalerer konstant. 
-
-%4 bytes udover string. Vi gemmer en kopi af ressourcen. 2byte + 2N variabel. O nationen er N (hvor N er strengens længde).
-
-
-%Average afhænger meget af opførslen af brugeren. Alle beskeder er som udgangspunkt linære fordi ...? 
-%Average er typisk svært at gøre rede for, since at man ikke altid kan have en datalogisk tilgang til det. Derfor er det typisk nok, at skrive at "man ikke kan undstøtte sit argument matemmatisk, men det mest sandsynlige er ...."
-%Størrelsen af beskeden er linæer i brugerens indput 
-%Hvis at der bliver spurgt om en key, der ikke er i systemet, så fordi at det ikke bliver gemt, om hvilken Nodes den har været igennem, så vil forespørgslerne blot blive sendt rundt og rundt i en uendelighed. Dette kan få systemet til at crashe, hvis man bliver ved med at med at requeste data. ipv6 er 128bit (hex)
-%samlet i clusters
-%når vi sender en getbesked, så er det egentlig N (antallet af Nodes), -1, og derefter +2. Det bliver derfor N+1. -1 da den ikke skal spørge den første igen, N = igennem alle noder, og +2 for at spørge ... 
-%In our solution we will put the resource in the system manually and therefore it's not guaranteed that the resources are distributed effectively. 
-
-
-
-\begin{itemize}
-	\item Best case
-\end{itemize}
